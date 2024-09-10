@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#app {
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for the app container */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+input, select, button {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#seat-map {
+  display: flex;
+  gap: 40px; /* Gap between coaches */
+}
+
+.coach {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* Gap between columns */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Gap between seats in a column */
+}
+
+.column button {
+  width: 40px;
+  height: 40px;
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+}
+
+.column button.selected {
+  background-color: green;
+  color: white;
+}
+
+.column button.locked {
+  background-color: red;
+  cursor: not-allowed;
+}
+
+#confirm-payment {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#confirm-booking {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#success-screen {
+  text-align: center;
+}
+
+#return-home, #print-ticket {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#print-ticket {
+  background-color: #28a745; /* Different color for print button */
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Home Screen -->
+        <div id="home-screen">
+            <h2>Train Ticket Booking</h2>
+            <form id="booking-form">
+                <label for="origin">Origin:</label>
+                <select id="origin" required>
+                    <option value="">-- Select Origin --</option>
+                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                    <option value="Johore Bharu">Johore Bharu</option>
+                    <option value="Putrajaya">Putrajaya</option>
+                    <option value="Shah Alam">Shah Alam</option>
+                </select>
+
+                <label for="destination">Destination:</label>
+                <select id="destination" required>
+                    <option value="">-- Select Destination --</option>
+                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                    <option value="Johore Bharu">Johore Bharu</option>
+                    <option value="Putrajaya">Putrajaya</option>
+                    <option value="Shah Alam">Shah Alam</option>
+                </select>
+                
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+            
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return-date" required>
+            
+                <label for="pax">Number of Passengers:</label>
+                <input type="number" id="pax" name="pax" min="1" value="1">
+
+                <button type="submit">Next</button>
+            </form>
+        </div>
+
+        <!-- Train Selection Screen -->
+        <div id="train-info-screen" class="hidden">
+            <h2>Select a Train</h2>
+            <div id="train-list">
+                <!-- Train details will be dynamically injected here -->
+            </div>
+        </div>
+
+        <!-- Seat Selection Screen -->
+        <div id="seat-selection-screen" class="hidden">
+            <h2>Select Your Seats</h2>
+            <div id="seat-map"></div>
+            <button id="back-to-train-selection">Back to Train Selection</button> <!-- Back to Train Selection -->
+            <button id="confirm-booking">Confirm Booking</button>
+        </div>
+
+        <!-- Booking Summary Screen -->
+        <div id="booking-summary-screen" class="hidden">
+            <h2>Booking Summary</h2>
+            <div id="booking-summary"></div>
+            <button id="back-to-seat-selection">Back to Seat Selection</button> <!-- Back to Seat Selection -->
+            <button id="confirm-payment">Confirm Payment</button>
+        </div>
+
+        <!-- Success Message Screen -->
+        <div id="success-screen" class="hidden">
+            <h2>Booking Successful!</h2>
+            <p>Your booking has been confirmed.</p>
+            <button id="return-home">Return Home</button>
+            <button id="print-ticket">Print Ticket</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
